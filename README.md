@@ -1,12 +1,25 @@
 # SokoMart_Performance_and_Sales-Analytics
 Enterprise Power BI suite analyzing $2.86M in revenue, customer churn exposure, and dynamic win-back projections.
 # Soko Mart: Enterprise Revenue Optimization & Churn Diagnostic Analytics
+# Problem
 
-![Executive_Overview](Dashboard_Images/Executive_Overview.png)
+SokoMart's leadership had no systematic way to tell which customers were driving revenue, which were slipping away, and where to focus retention spend. Revenue was growing quarter over quarter, but there was no visibility into customer-level health — so churn was invisible until it already showed up in the topline numbers.
+
+# The goal:
+Segment the customer base using RFM (Recency, Frequency, Monetary) analysis, quantify how much revenue was at risk of churn, and turn that into a dashboard the business could act on — not just look at.
+
+# Approach
+
+1. SQL — segmentation from raw data Started from raw customers, products, and orders tables and built the RFM logic step by step in SQL: recency (days since last order), frequency (order count), and monetary value (total spend) per customer, then a segmentation layer classifying each customer as Champion, At_Risk, or Churned.
+
+2. Power BI — model and DAX Loaded the cleaned RFM output into Power BI and built out the measure layer: total revenue, total orders, total customers, average order value, customers per segment, and churn/at-risk revenue calculations — including a win-back simulation measure driven by an adjustable recovery-rate slicer.
+
+3. Dashboard — a 4-page story Rather than one crowded page, the report is structured to walk a reader from the big picture down to the specific action
 
 ## 📌 Executive Summary
 Soko Mart is an e-commerce platform processing **$2.86M** in total revenue across **943 customer orders**. This project establishes an enterprise-grade Power BI reporting suite designed to monitor sales health, evaluate product category margins, identify dormant customer risk, and simulate recovery potential.
 
+![Executive_Overview](Dashboard_Images/Executive_Overview.png)
 ---
 
 ## 💡 Key Business Findings
